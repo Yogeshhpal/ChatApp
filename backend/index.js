@@ -11,7 +11,8 @@ const router = require('./routes');
 
 // Middleware
 app.use(cors({
-    origin: "http://localhost:3000",
+    // origin: "http://localhost:3000",
+    origin: "https://omegle-chat-app-frontend-fpvce3n4y-yogeshs-projects-60f26ef9.vercel.app/email",
     // origin: "https://omegle-frontend-diex.onrender.com",
     credentials: true
 }));
