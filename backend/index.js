@@ -11,7 +11,8 @@ const router = require('./routes');
 
 // Middleware
 app.use(cors({
-    origin: "http://localhost:3000",
+    // origin: "http://localhost:3000",
+    origin: "https://omegle-frontend-diex.onrender.com",
     credentials: true
 }));
 app.use(express.json()); // This should come before routes
