@@ -33,7 +33,7 @@ const Home = () => {
       }
       // console.log("current user Details", response)
     } catch (error) {
-      // navigate("/register")
+      navigate("/register")
       // console.log("error", error)
       toast.error(error.message);
     }
