@@ -1,0 +1,35 @@
+# Ignore environment files
+/backend/.env
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+
+# Dependency directories
+/node_modules
+/.pnp
+.pnp.js
+
+# Production builds
+/backend/build
+/frontend/build
+
+# IDE/Editor specific files
+.vscode
+.idea
+
+# Logs and testing artifacts
+/coverage
+
+# Specific project files
+/backend/npm-debug.log*
+/backend/yarn-debug.log*
+/backend/yarn-error.log*
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+backend/Dockerfile
+
+# Ignore package lock files
+package-lock.json    # for npm users
