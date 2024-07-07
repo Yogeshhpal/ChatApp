@@ -16,6 +16,10 @@ app.use(cors({
     // origin: "https://omegle-frontend-diex.onrender.com",
     credentials: true
 }));
+
+// Handle preflight OPTIONS requests for all routes
+app.options('*', cors());
+
 app.use(express.json()); // This should come before routes
 app.use(express.urlencoded({ extended: true })); // This should also come before routes
 app.use(cookieParser());
