@@ -18,11 +18,11 @@ const CheckPasswordPage = () => {
   const dispatch = useDispatch()
   // console.log('location', location)
 
-  useEffect(() => {
-    if (!location?.state?.name) {
-      navigate('/email')
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (!location?.state?.name) {
+  //     navigate('/email')
+  //   }
+  // }, [])
 
   const handleOnChange = (e) => {
     const { name, value } = e.target
