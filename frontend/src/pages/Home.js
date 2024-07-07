@@ -28,7 +28,7 @@ const Home = () => {
 
       if (response.data.data.logout) {
         dispatch(logout())
-        dispatch(setUser(response.data.data))
+        // dispatch(setUser(response.data.data))
         navigate("/email")
       }
       // console.log("current user Details", response)
