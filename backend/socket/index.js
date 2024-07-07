@@ -11,9 +11,8 @@ const getConversation = require('../helpers/getConversation');
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
-        // origin: "https://omegle-chat-app-frontend-fpvce3n4y-yogeshs-projects-60f26ef9.vercel.app/email",
-        // origin: "https://omegle-frontend-diex.onrender.com",
+        // origin: "http://localhost:3000",
+        origin: "https://my-chat-app-frontend-j9nk.onrender.com",
         credentials: true
     }
 });
