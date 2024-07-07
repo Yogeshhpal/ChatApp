@@ -30,7 +30,7 @@ async function registerUser(req, res) {
         // Save the new user to the database
         const user = new UserModel(payload);
         const userSave = await user.save();
-        console.log(userSave);
+        // console.log(userSave);
         return res.status(201).json({
             message: "User Registered Successfully",
             error: false,

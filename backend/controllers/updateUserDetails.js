@@ -14,7 +14,7 @@ async function updateUserDetails(req, res) {
         });
 
         const userInformation=await UserModel.findById(user._id);
-        console.log(userInformation);
+        // console.log(userInformation);
         return res.status(200).json({
             message: "User details updated successfully",
             error: false,

@@ -94,7 +94,7 @@ const MessagePage = () => {
       });
 
       socketConnection.on('message', (data) => {
-        console.log('all message', data);
+        // console.log('all message', data);
         setAllMessage(data);
       });
     }

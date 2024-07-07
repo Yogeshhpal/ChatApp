@@ -6,6 +6,7 @@ import { logout, setOnlineUser, setSocketConnection, setUser } from '../redux/us
 import SideBar from '../components/SideBar'
 import logo from '../assets/logo.png'
 import io from 'socket.io-client'
+import toast from 'react-hot-toast'
 
 const Home = () => {
   const user = useSelector(state => state.user)
@@ -32,7 +33,9 @@ const Home = () => {
       }
       // console.log("current user Details", response)
     } catch (error) {
-      console.log("error", error)
+      // navigate("/register")
+      // console.log("error", error)
+      toast.error(error.message);
     }
   }
 

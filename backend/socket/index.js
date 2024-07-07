@@ -27,8 +27,8 @@ const onlineUser = new Set();
 let user;
 
 io.on('connection', async (socket) => {
-    console.log('User connected', socket.id);
-    console.log("online users", onlineUser);
+    // console.log('User connected', socket.id);
+    // console.log("online users", onlineUser);
     const token = socket.handshake.auth.token;
     // current user details
     user = await getUserDetailsFromToken(token);
@@ -40,9 +40,9 @@ io.on('connection', async (socket) => {
 
 
     socket.on('message-page', async (userId) => {
-        console.log('userId', userId);
+        // console.log('userId', userId);
         const userDetails = await UserModel.findById(userId).select('-password');
-        console.log('userDetails', userDetails);
+        // console.log('userDetails', userDetails);
         const payload = {
             _id: userDetails?._id,
             name: userDetails?.name,
@@ -89,7 +89,7 @@ io.on('connection', async (socket) => {
                     receiver: data?.receiver,
                 });
                 conversation = await createConversation.save();
-                console.log('Created new conversation', conversation);
+                // console.log('Created new conversation', conversation);
             }
 
             const message = new MessageModel({
@@ -99,7 +99,7 @@ io.on('connection', async (socket) => {
                 msgByUserId: data?.msgByUserId,
             });
 
-            console.log('message', message);
+            // console.log('message', message);
 
             const saveMessage = await message.save();
             // console.log('Saved message', saveMessage);

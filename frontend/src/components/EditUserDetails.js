@@ -53,7 +53,7 @@ const EditUserDetails = ({ onClose, user }) => {
                 profile_pic: uploadPhoto?.url
             }
         })
-        console.log(data);
+        // console.log(data);
     }
 
     const handleSubmit = async (e) => {
@@ -78,8 +78,8 @@ const EditUserDetails = ({ onClose, user }) => {
             }
 
         } catch (error) {
-            console.log(error)
-            taost.error()
+            // console.log(error)
+            taost.error(error?.response?.data?.message || 'Something went wrong')
         }
     }
     // console.log(data);
