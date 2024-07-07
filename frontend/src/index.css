@@ -12,7 +12,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     @apply bg-slate-200
 }
-
+ 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
