@@ -31,10 +31,10 @@ const Home = () => {
         // dispatch(setUser(response.data.data))
         navigate("/email")
       }
-      // console.log("current user Details", response)
+      console.log("current user Details", response)
     } catch (error) {
       navigate("/register")
-      // console.log("error", error)
+      console.log("error", error)
       toast.error(error.message);
     }
   }
