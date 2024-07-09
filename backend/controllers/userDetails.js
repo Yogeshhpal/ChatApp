@@ -1,21 +1,28 @@
-const getUserDetailsFromToken = require("../helpers/getUserDetailsFromToken")
+const getUserDetailsFromToken = require("../helpers/getUserDetailsFromToken");
 
-async function userDetails(request, response) {
+async function userDetails(req, res) {
     try {
-        const token = request.cookies.token || ""
+        const token = req.cookies.token || "";
 
-        const user = await getUserDetailsFromToken(token)
+        if (!token) {
+            return res.status(401).json({
+                message: "Authentication token is missing",
+                error: true
+            });
+        }
 
-        return response.status(200).json({
-            message: "user details",
+        const user = await getUserDetailsFromToken(token);
+
+        return res.status(200).json({
+            message: "User details retrieved successfully",
             data: user
-        })
+        });
     } catch (error) {
-        return response.status(500).json({
-            message: error.message || error,
+        return res.status(500).json({
+            message: error.message || "An unexpected error occurred",
             error: true
-        })
+        });
     }
 }
 
-module.exports = userDetails
+module.exports = userDetails;
