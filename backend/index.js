@@ -11,8 +11,8 @@ const router = require('./routes');
 
 // Middleware
 app.use(cors({
-    origin: "http://localhost:3000",
-    // origin: "https://my-chat-app-frontend-j9nk.onrender.com",
+    // origin: "http://localhost:3000",
+    origin: "https://my-chat-app-frontend-j9nk.onrender.com",
     credentials: true
 }));
 
