@@ -12,7 +12,7 @@ const router = require('./routes');
 // Middleware
 app.use(cors({
     // origin: "http://localhost:3000",
-    origin: "https://my-chat-app-frontend-j9nk.onrender.com",
+    origin: "https://omegle-frontend-diex.onrender.com",
     credentials: true
 }));
 
